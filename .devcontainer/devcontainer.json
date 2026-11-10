@@ -1,0 +1,66 @@
+{
+  "name": "Java (IntelliJ style)",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installMaven": "true",
+      "installGradle": "true"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "k--kato.intellij-idea-keybindings",
+        "rokoroku.vscode-theme-darcula",
+        "pkief.material-icon-theme"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Darcula",
+        "workbench.iconTheme": "material-icon-theme",
+        "workbench.startupEditor": "none",
+        "window.commandCenter": false,
+        "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+        "editor.fontSize": 14,
+        "editor.fontLigatures": true,
+        "editor.lineHeight": 1.5,
+        "editor.minimap.enabled": false,
+        "editor.rulers": [
+          120
+        ],
+        "editor.stickyScroll.enabled": true,
+        "editor.guides.bracketPairs": true,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.formatOnSave": true,
+        "editor.renderWhitespace": "selection",
+        "editor.cursorBlinking": "solid",
+        "editor.smoothScrolling": true,
+        "editor.suggestSelection": "first",
+        "editor.acceptSuggestionOnEnter": "on",
+        "breadcrumbs.enabled": true,
+        "explorer.compactFolders": true,
+        "files.autoSave": "onFocusChange",
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "java.inlayHints.parameterNames.enabled": "all",
+        "java.codeGeneration.hashCodeEquals.useJava7Objects": true,
+        "java.codeGeneration.useBlocks": true,
+        "java.saveActions.organizeImports": true,
+        "java.completion.importOrder": [
+          "java",
+          "javax",
+          "com",
+          "org",
+          ""
+        ],
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.compile.nullAnalysis.mode": "automatic",
+        "java.format.onType.enabled": true,
+        "terminal.integrated.fontFamily": "'JetBrains Mono', monospace",
+        "terminal.integrated.fontSize": 13
+      }
+    }
+  },
+  "postCreateCommand": "java -version && mvn -version"
+}
